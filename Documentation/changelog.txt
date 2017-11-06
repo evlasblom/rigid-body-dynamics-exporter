@@ -1,0 +1,59 @@
+
+v.1.6.
+- added a calculators folder with the COMCalculator
+- moved plotstates and animation3d to utilities/visualization
+- updated plotstates function:
+  cleaned up redundant code
+  added more options such as events
+- added base visual to create model and animation3d
+- renamed tools to utilities
+- updated kinematics:
+  updated homogeneoustransform and rotation matrix (-1 as additional input gives inverse)
+  removed DH transform function
+  added H_transform and R_matrix functions
+- updated connectivity:
+  added adjacency and dijkstra functions
+  put connectivity related functions in separate folder
+- added recursive center of mass jacobian:
+  required a new and modified main function
+  new divide function for export
+- added recursive constraints:
+  required a new and modified main function
+  new get element and subtraction functions for export
+- added recursive linearized dynamics:
+  required a new and modified main function
+  new ombar and ad functions for export
+  put naming of variables in a separate function for export
+- improved dynamic tree generation:
+  added zero field to the tuples
+  zeros are removed from expressions
+
+v.1.5
+- implemented first version of dynamic tree generation:
+  removed most symbolic computations
+  removed most existing export functions
+  instead, the symbolic computation and numeric export are combined
+- export functions now return strings instead of writing directly
+  as a result, API changed for these functions, which causes problems
+  when the export functions have been used manually after setting acces to true
+- added rbde2spatial to use Featherstone algorithms. Function also includes cube size detection.
+- put make_cube back to Animation3D (so parameters can be modified for visualization)
+- removed connectivity calculations from RecursiveDynamics
+- updated pdf (removed algorithm)
+
+v.1.1
+- always create and export parameter struct 
+- moved make_cube from Animation3D to CreateModel
+- removed some symbolic simplifications, made them optional
+- changed the model structure (now more similar to urdf)
+- more global variables
+- added rbde2spatial
+- added plotstates
+
+v.1.0
+- Made the three main functions (Animation3D, CreateModel, RecursiveDynamics) as API
+
+v.0.5
+- first smart version (i.e. constructed eom in a smart way
+  instead of calculating the energies and doing symbolic derivations)
+- implemented simplified equations of motion
