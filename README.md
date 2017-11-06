@@ -9,7 +9,7 @@ Although many fast algorithms exist for computing the rigid body dynamics of rob
 ## Contents
 This repository contains first and foremost a collection of functions for kinematics and screw theory, to accompany the book _A Mathematical Introduction to Robotic Manipulation_ by Murray et al. [1]. It contains most of the important functions, as well as several functions to describe connectivity from [4][5]. In additional, several exporters of kinematic and dynamic quantities are provided.
 
-A number of very useful examples is included. This includes numerical integration of the dynamic models with and without constraints, nonlinear state estmation, simple balance control of a humanoid, performing torque control via Matlab to V-REP, etcetera. See the [examples](examples/README.md) for more information.
+A number of very useful examples is included. This includes numerical integration of the dynamic models with and without constraints, nonlinear state estmation, simple balance control of a humanoid, performing torque control via Matlab to V-REP, etcetera. See the [examples](Examples/README.md) for more information.
 
 ## Contributing
 The Rigid Body Dynamics Exporter was built during and after my graduation and used in several research projects. Development is currently on hold, but feel free to contact me.
